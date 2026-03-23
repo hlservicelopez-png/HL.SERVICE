@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HL Service</title>
+    <meta name="description" content="HL Service By Hedisson Lopez - Seguridad electrónica, electricidad residencial e industrial, hogar inteligente y energía solar." />
+    <title>HL Service By Hedisson Lopez</title>
   </head>
   <body>
     <div id="root"></div>
