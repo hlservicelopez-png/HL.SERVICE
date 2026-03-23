@@ -1,0 +1,146 @@
+const services = [
+  {
+    title: 'Seguridad Electrónica',
+    description:
+      'Instalación de cámaras, alarmas, controles de acceso y soluciones de monitoreo para hogares, negocios e industrias.',
+  },
+  {
+    title: 'Electricidad Residencial e Industrial',
+    description:
+      'Montaje, mantenimiento y mejora de sistemas eléctricos con enfoque en seguridad, rendimiento y orden técnico.',
+  },
+  {
+    title: 'Hogar Inteligente',
+    description:
+      'Automatización de luces, cerraduras, portones, sensores y dispositivos inteligentes para mayor comodidad y control.',
+  },
+  {
+    title: 'Energía Solar',
+    description:
+      'Soluciones solares eficientes para reducir consumo eléctrico y aumentar la autonomía energética de tu propiedad.',
+  },
+]
+
+const projects = [
+  'Instalación de cámaras de seguridad',
+  'Automatización de hogares y oficinas',
+  'Sistemas eléctricos organizados y seguros',
+  'Implementación de soluciones solares',
+]
+
+export default function App() {
+  return (
+    <div className="page">
+      <header className="hero">
+        <div className="hero-overlay" />
+        <div className="container hero-grid">
+          <section>
+            <div className="badge">Tecnología, seguridad y energía en un solo lugar</div>
+            <h1>
+              HL SERVICE BY <span>HEDISSON LOPEZ</span>
+            </h1>
+            <p className="hero-text">
+              Soluciones profesionales en seguridad electrónica, electricidad residencial e industrial,
+              hogar inteligente y energía solar.
+            </p>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href="#servicios">
+                Ver servicios
+              </a>
+              <a
+                className="btn btn-secondary"
+                href="https://wa.me/18295872690"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Cotizar por WhatsApp
+              </a>
+            </div>
+          </section>
+
+          <section className="hero-cards">
+            <article className="mini-card">
+              <small>Servicio 01</small>
+              <h3>Cámaras y Alarmas</h3>
+              <p>Protección inteligente para residencias, oficinas y negocios.</p>
+            </article>
+            <article className="mini-card">
+              <small>Servicio 02</small>
+              <h3>Automatización</h3>
+              <p>Controla tu hogar o empresa desde tu móvil.</p>
+            </article>
+            <article className="mini-card">
+              <small>Servicio 03</small>
+              <h3>Electricidad</h3>
+              <p>Instalaciones seguras, limpias y eficientes.</p>
+            </article>
+            <article className="mini-card">
+              <small>Servicio 04</small>
+              <h3>Energía Solar</h3>
+              <p>Ahorro energético con soluciones modernas.</p>
+            </article>
+          </section>
+        </div>
+      </header>
+
+      <main>
+        <section id="servicios" className="section container">
+          <div className="section-heading">
+            <p className="eyebrow">Nuestros servicios</p>
+            <h2>Soluciones para hogares, negocios e industrias</h2>
+            <p>
+              Trabajamos con enfoque técnico y profesional para ofrecer instalaciones seguras, funcionales y modernas.
+            </p>
+          </div>
+
+          <div className="service-grid">
+            {services.map((service) => (
+              <article key={service.title} className="service-card">
+                <div className="service-line" />
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section section-muted">
+          <div className="container about-grid">
+            <div>
+              <p className="eyebrow">Por qué elegirnos</p>
+              <h2>Calidad, confianza y atención personalizada</h2>
+              <p>
+                En HL Service By Hedisson Lopez nos enfocamos en brindar soluciones confiables con una presentación técnica profesional.
+              </p>
+            </div>
+            <div className="check-grid">
+              {projects.map((item) => (
+                <div key={item} className="check-card">
+                  ✓ {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contacto" className="section contact-section">
+          <div className="container contact-box">
+            <p className="eyebrow light">Contáctanos</p>
+            <h2>Solicita tu cotización hoy</h2>
+            <p>
+              Llevamos tecnología, seguridad y energía eficiente a tus espacios con un servicio profesional y moderno.
+            </p>
+            <a
+              className="btn btn-primary btn-large"
+              href="https://wa.me/18295872690"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Escribir por WhatsApp
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
